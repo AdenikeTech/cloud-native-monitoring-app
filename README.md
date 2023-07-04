@@ -219,3 +219,14 @@ kubectl get pods -n default (to check the pods)
 Once your pod is up and running, run the port-forward to expose the service
 
 kubectl port-forward service/<service_name> 5000:5000
+
+
+
+sudo apt-get update
+  546  sudo apt-get upgrade awscli
+  547  aws --version
+  548  kubectl get nodes
+  549  vim ~/.kube/config
+  550  pip3 install awscli --upgrade --user
+  551  vim ~/.kube/config
+  552  kubectl get nodes
