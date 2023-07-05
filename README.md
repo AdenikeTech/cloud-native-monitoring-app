@@ -230,3 +230,24 @@ sudo apt-get update
   550  pip3 install awscli --upgrade --user
   551  vim ~/.kube/config
   552  kubectl get nodes
+  pip install --pre --upgrade kubernetes
+  apt install ectl
+  486  sudo apt install ectl
+  487  sudo apt install eksctl
+  488  sudo apt-get update
+  489  sudo apt-get install -y curl gzip
+  490  sudo curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | sudo tar xz -C /usr/local/bin
+  491  echo 'export PATH=$PATH:/usr/local/bin' >> ~/.bashrc
+  492  source ~/.bashrc
+  493  eksctl version
+  Client Version: v1.27.X-eks-1234567
+  496  curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.27.1/2023-04-19/bin/linux/amd64/kubectl
+  497  curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.27.1/2023-04-19/bin/linux/arm64/kubectl
+  498  chmod +x ./kubectl
+  499  mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$HOME/bin:$PATH
+  500  echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
+  eksctl create cluster -n cluster1 --nodegroup-name ng1 --region ca-central-1 --node-type t2.micro --nodes 2
+  eksctl delete cluster -n cluster1
+  
+  challenge faced when deploying to eks
+  The error message you provided indicates that there was an unauthorized access attempt to the Kubernetes API, resulting in a 401 Unauthorized response. The request you made to the API was not authenticated or lacked the necessary permissions to access the requested resource.
